@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.password">1234</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/robonet</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <mapping resource="pojo/Registration.hbm.xml"  />
+        <mapping resource="pojo/Role.hbm.xml"  />
+        <mapping resource="pojo/Studproject.hbm.xml"  />
+        <mapping resource="pojo/Clientproject.hbm.xml"  />
+        <mapping resource="pojo/Attendancemaster.hbm.xml"  />
+        <mapping resource="pojo/Leavemaster.hbm.xml"  />
+        <mapping resource="pojo/Expense.hbm.xml"  />
+        <mapping resource="pojo/Income.hbm.xml"  />
+         <mapping resource="pojo/Online.hbm.xml"  />
+          <mapping resource="pojo/Urlmaster.hbm.xml"  />
+          <mapping resource="pojo/Blog.hbm.xml"  />
+        
+    </session-factory>
+   
+
+</hibernate-configuration>

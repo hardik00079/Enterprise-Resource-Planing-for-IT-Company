@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2016 5:58:15 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="pojo.Registration" table="registration" catalog="robonet">
+        <id name="regId" type="java.lang.Integer">
+            <column name="RegID" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="role" class="pojo.Role" fetch="select">
+            <column name="RolID" not-null="true" />
+        </many-to-one>
+        <property name="fname" type="string">
+            <column name="fname" length="20" not-null="true" />
+        </property>
+        <property name="mname" type="string">
+            <column name="mname" length="20" not-null="true" />
+        </property>
+        <property name="lname" type="string">
+            <column name="lname" length="20" not-null="true" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="50" not-null="true" unique="true" />
+        </property>
+        <property name="password" type="string">
+            <column name="password" length="20" not-null="true" />
+        </property>
+        <property name="dob" type="date">
+            <column name="dob" length="10" not-null="true" />
+        </property>
+        <property name="gender" type="string">
+            <column name="gender" length="6" not-null="true" />
+        </property>
+        <property name="contactno" type="string">
+            <column name="contactno" length="13" not-null="true" />
+        </property>
+        <property name="address" type="string">
+            <column name="address" length="200" not-null="true" />
+        </property>
+        <property name="rgFirstattemptflag" type="java.lang.Integer">
+            <column name="rg_firstattemptflag" />
+        </property>
+        <set name="studprojects" table="studproject" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="regid" />
+            </key>
+            <one-to-many class="pojo.Studproject" />
+        </set>
+        <set name="leavemasters" table="leavemaster" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="regid" />
+            </key>
+            <one-to-many class="pojo.Leavemaster" />
+        </set>
+    </class>
+</hibernate-mapping>

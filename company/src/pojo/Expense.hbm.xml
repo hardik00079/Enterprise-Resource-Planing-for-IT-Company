@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2016 5:58:15 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="pojo.Expense" table="expense" catalog="robonet">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="description" type="string">
+            <column name="description" length="50" />
+        </property>
+        <property name="amount" type="big_decimal">
+            <column name="amount" precision="10" />
+        </property>
+        <property name="day" type="java.lang.Integer">
+            <column name="day" />
+        </property>
+        <property name="month" type="java.lang.Integer">
+            <column name="month" />
+        </property>
+        <property name="year" type="java.lang.Integer">
+            <column name="year" />
+        </property>
+        <property name="hour" type="java.lang.Integer">
+            <column name="hour" />
+        </property>
+        <property name="minute" type="java.lang.Integer">
+            <column name="minute" />
+        </property>
+        <property name="second" type="java.lang.Integer">
+            <column name="second" />
+        </property>
+        <property name="amPm" type="string">
+            <column name="am_pm" length="2" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2016 5:58:15 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="pojo.Clientproject" table="clientproject" catalog="robonet">
+        <id name="proid" type="java.lang.Integer">
+            <column name="proid" />
+            <generator class="identity" />
+        </id>
+        <property name="protitle" type="string">
+            <column name="protitle" length="40" />
+        </property>
+        <property name="description" type="string">
+            <column name="description" length="200" />
+        </property>
+        <property name="language" type="string">
+            <column name="language" length="20" />
+        </property>
+    </class>
+</hibernate-mapping>

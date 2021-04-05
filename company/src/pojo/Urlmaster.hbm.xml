@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2016 5:58:15 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="pojo.Urlmaster" table="urlmaster" catalog="robonet">
+        <id name="urlid" type="java.lang.Integer">
+            <column name="urlid" />
+            <generator class="identity" />
+        </id>
+        <property name="urlDvpId" type="java.lang.Integer">
+            <column name="url_dvp_id" />
+        </property>
+        <property name="urlStudId" type="java.lang.Integer">
+            <column name="url_stud_id" />
+        </property>
+        <property name="urlStatus" type="java.lang.Integer">
+            <column name="url_status" />
+        </property>
+        <property name="requestTime" type="timestamp">
+            <column name="request_time" length="19" not-null="true" />
+        </property>
+        <property name="url" type="string">
+            <column name="url" length="300" />
+        </property>
+        <property name="acceptTime" type="timestamp">
+            <column name="accept_time" length="19" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

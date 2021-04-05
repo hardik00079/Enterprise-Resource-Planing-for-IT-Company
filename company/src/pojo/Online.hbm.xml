@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2016 5:58:15 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="pojo.Online" table="online" catalog="robonet">
+        <id name="onid" type="java.lang.Integer">
+            <column name="onid" />
+            <generator class="identity" />
+        </id>
+        <property name="olFlag" type="java.lang.Boolean">
+            <column name="ol_flag" />
+        </property>
+        <property name="olUmId" type="java.lang.Integer">
+            <column name="ol_um_id" />
+        </property>
+    </class>
+</hibernate-mapping>
